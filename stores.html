@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEESTORE - Our stores</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background: #101010;
+            color: white;
+        }
+
+        header {
+            background: url(https://blogs.microsoft.com/wp-content/uploads/prod/sites/5/2023/03/LDC5-Blog-Hero-Image-scaled.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar sticky-top px-3 navbar-expand-lg text-light py-4" style="background:#151517">
+        <div class="container-fluid">
+            <a class="fw-bold h1 me-3 text-decoration-none" href="home.html">LeeStore</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list fs-1 text-secondary"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" aria-current="page" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-light" href="stores.html">Stores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="bestseller.html">Bestseller</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="container-fluid py-5 d-flex flex-column justify-content-center" style="height: 85vh;">
+        <div class="container text-center">
+            <div class="display-4 fw-bold mb-4" style="text-shadow: 0 0 10px black;">WE HAVE 37 STORE<br>ALL AROUND
+                VIETNAM</div>
+            <button class="btn btn-dark rounded-5 px-5 py-2" onclick="$('#modal').modal('show');"><i
+                    class="bi bi-geo-alt-fill"></i> Find nearest</button>
+        </div>
+    </header>
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="mlabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="mlabel"><i class="bi bi-search-heart"></i> STORE FINDER</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body py-4 d-flex flex-column">
+                    <input type="text" class="form-control mb-4" placeholder="Enter your city">
+                    <button type="button" class="btn btn-primary ms-auto rounded-5 px-4"  onclick="$('#modal').modal('hide');"><i class="bi bi-search"></i> Find nearest!!!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="py-4 bg-black text-center">
+        <div>
+            <div class="footerContainer">
+                <div class="socialIcons">
+
+                    <a href="https://www.facebook.com/ducc06"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/hg.ducc/?hl=en"><i class="bi bi-instagram"></i></a>
+                    <a href="https://twitter.com/imessi"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.tiktok.com/@pinkduck04?lang=vi-VN"><i class="bi bi-tiktok"></i></a>
+                </div>
+                <div class="footerNav">
+                    <ul class="ps-0">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="stores.html">Stores</a></li>
+                        <li><a href="bestseller.html">Bestseller</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footerBottom">
+            </div>
+            <style>
+                * {
+                    padding: 0;
+                    margin: 0;
+                    box-sizing: border-box;
+                }
+
+                .footerContainer {
+                    width: 100%;
+                }
+
+                .socialIcons {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .socialIcons a {
+                    text-decoration: none;
+                    padding: 10px;
+                    margin: 10px;
+                }
+
+                .socialIcons a i {
+                    font-size: 2em;
+                    color: white !important;
+                    opacity: 0.9;
+                }
+
+                .socialIcons a:hover i {
+                    opacity: 0.7;
+                    transition: 0.5s;
+                }
+
+                .footerNav {
+                    margin: 30px 0;
+                }
+
+                .footerNav ul {
+                    display: flex;
+                    justify-content: center;
+                    list-style-type: none;
+                }
+
+                .footerNav ul li a {
+                    color: white;
+                    margin: 20px;
+                    text-decoration: none;
+                    font-size: 1.3em;
+                    opacity: 0.7;
+                    transition: 0.5s;
+                }
+
+                .footerNav ul li a:hover {
+                    opacity: 1;
+                }
+
+                .footerBottom {
+                    background-color: #000;
+                    padding: 20px;
+                    text-align: center;
+                }
+
+                .footerBottom p {
+                    color: white;
+                }
+
+                .designer {
+                    opacity: 0.7;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-weight: 400;
+                    margin: 0px 5px;
+                }
+
+                @media (max-width: 700px) {
+                    .footerNav ul {
+                        flex-direction: column;
+                    }
+
+                    .footerNav ul li {
+                        width: 100%;
+                        text-align: center;
+                        margin: 10px;
+                    }
+                }
+            </style>
+            <div class="text-white">
+                Copyright ©2023. Designed by <b class="text-secondary">LEESTORE</b>
+            </div>
+    </footer>
+</body>
+
+</html>

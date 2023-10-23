@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    transition: .3s all;
+}
+
+body {
+	font-family: 'Rubik', sans-serif;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color:#080e03;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 20px;
+    }
+
+}
+@media (max-width: 858px){
+    .checkbtn{
+        display: block ;
+    }
+   
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
